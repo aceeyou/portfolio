@@ -2,12 +2,95 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="icon" href="./images/logo/logo-black-circle.png" />
     <title>Ace Logronio</title>
   </head>
   <body>
+    <header>
+      <nav role="navbar" id="navbar">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li class="logo-li">
+            <a href="#hero"
+              ><img
+                src="./images/logo/logo-white.png"
+                alt="ace logronio logo"
+                id="logo-img"
+            /></a>
+          </li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Hire Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero-section" id="hero">
+        <div class="container">
+          <img
+            src="./images/ace/ace-photo-1.png"
+            alt="ace logronio portrait number 1"
+            id="portrait-1"
+          />
+          <p class="hero-ace top">ACE</p>
+          <p class="hero-ace main-ace">ACE</p>
+          <p class="hero-ace bottom">ACE</p>
+        </div>
+      </section>
+      <section class="about-section" id="about">
+        <div class="left">
+          <img
+            src="./images/graphics/squigly1.png"
+            alt="squigly line graphic"
+            class="squigly-1"
+          />
+          <p class="hello">Hello! 👋</p>
+          <p class="im-ace">
+            <span class="text-semibold">I'm </span>Ace Logronio
+          </p>
+          <p class="about-me-text">
+            I’m an avid fan of tech since grade school. My love for coding
+            started in high school when I searched for a career that will suit
+            my skills. I discovered Web development and was in love with it
+            since then. In 2023, I finished college with the degree in Bachelor
+            of Science in Information Technology at Bicol University
+          </p>
+          <div class="tech-used">
+            <div class="tech-heading-container">
+              <p class="main-tech-text">
+                <span class="sr-only">The </span>Tech
+                <span class="sr-only">that I use are</span>
+              </p>
+              <p class="stacked-tech-text">Tech</p>
+              <p class="stacked-tech-text last">Tech</p>
+            </div>
+            <div class="tech-stack">
+              <ul>
+                <li class="box text-bold html-tech">HTML</li>
+                <li class="box text-bold css-tech">CSS</li>
+                <li class="box text-bold js-tech">JAVASCRIPT</li>
+                <li class="box text-bold react-tech">REACT</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <img
+            src="./images/ace/ace-photo-2.png"
+            alt="ace logronio is holding a laptop"
+            class="portrait-2"
+          />
+        </div>
+      </section>
+      <section id="projects"></section>
+    </main>
+    <footer></footer>
+
     <!-- <script src="./scripts/app.js"></script> -->
   </body>
 </html>
