@@ -2,6 +2,8 @@
 
 :root {
   --main-black: #131313;
+  --gray: #222;
+  --gray-btn: #474747;
   --white: #fafcff;
   --html: #dd4b25;
   --css: #254bdd;
@@ -29,6 +31,7 @@ html {
 body {
   font-family: "Inter", sans-serif;
   background-color: #131313;
+  position: relative;
 }
 
 a {
@@ -69,29 +72,70 @@ header {
 #navbar {
   display: flex;
 
-  & ul {
+  #menu-mobile {
+    position: absolute;
+    left: 20px;
+  }
+
+  > ul {
     margin-left: auto;
     margin-right: auto;
     display: flex;
     align-items: center;
   }
 
-  & ul li:not(.logo-li) {
-    padding: 3px 7px;
-    transition: 200ms;
-    transform-origin: center;
-    border-bottom: 1px solid var(--main-black);
-    text-transform: uppercase;
+  > ul li:not(.logo-li) {
+    display: none;
+  }
+}
+
+.mobile__nav {
+  display: block;
+  position: absolute;
+  top: -500px;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  background-color: var(--main-black);
+  box-shadow: 0 2px 40px 10px var(--main-black);
+  transition: 300ms;
+
+  > ul {
+    padding-top: 60px;
+    padding-bottom: 10px;
   }
 
-  & ul li:nth-of-type(2),
-  ul li:nth-of-type(5) {
-    margin-left: 40px;
+  > ul img {
+    position: absolute;
+    right: 30px;
+    top: 20px;
   }
 
-  &ul li a:hover {
-    border-bottom: 1px solid var(--white);
+  > ul li {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
   }
+
+  > ul li a {
+    font-size: 1.125rem;
+  }
+}
+
+.mobile__nav-close {
+  top: 20px;
+}
+
+.overlay__mobile_nav_open {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #13131388;
+  z-index: 10;
+  transition: 100ms;
 }
 
 #navbar ul li:not(.logo-li):hover {
@@ -121,29 +165,29 @@ header {
   }
 
   #portrait-1 {
-    width: 472px;
-    height: 521px;
+    width: 290px;
+    height: 330px;
     z-index: 1;
   }
 
   .hero-ace {
     font-family: "Syne", sans-serif;
-    font-size: 12.5rem;
+    font-size: 5.5rem;
     font-weight: 900;
     position: absolute;
-    letter-spacing: 3.75rem;
-    margin-right: -3.75rem;
+    letter-spacing: 0.5rem;
+    /* margin-right: -3.75rem; */
     color: rgba(255, 255, 255, 0.2);
     text-align: center;
     z-index: 2;
   }
 
   .hero-ace.top {
-    top: 15.37rem;
+    top: 19.4rem;
   }
 
   .hero-ace.bottom {
-    bottom: 15.3rem;
+    bottom: 19.4rem;
   }
 
   .main-ace {
@@ -153,11 +197,11 @@ header {
 
 /* About Me */
 .about-section {
-  width: 1200px;
+  width: 80vw;
+  height: 100vh;
   display: grid;
   position: relative;
-  grid-template-columns: 1.5fr min-content;
-  column-gap: 102px;
+  grid-template-columns: 100%;
   margin: 0 auto;
   padding-top: 250px;
 
@@ -165,28 +209,36 @@ header {
     width: 120px;
     height: 15px;
     position: absolute;
-    top: 12.1rem;
-    left: -60px;
+    top: 12.5rem;
+    left: 0px;
   }
 
   .hello,
   .im-ace {
-    font-size: 3.125rem;
+    font-size: 2.5rem;
     font-weight: 700;
   }
 
   .about-me-text {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.5625rem;
     margin: 10px 0 52px;
   }
 
+  .right {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 100px 0 130px;
+  }
+
   .portrait-2 {
-    width: 340px;
+    width: 300px;
   }
 }
 
 .about-section {
+  height: auto;
   .tech-heading-container {
     position: relative;
   }
@@ -218,6 +270,8 @@ header {
 
   & ul {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
   }
 
   & ul .box {
@@ -247,6 +301,317 @@ header {
 /* PROJECTS */
 
 #projects {
-  height: 100vh;
   width: 100vw;
+  height: auto;
+  background-color: var(--gray);
+  padding: 70px 0;
+
+  .project-header {
+    text-align: center;
+    font-family: Syne;
+    font-size: 1.563rem;
+    letter-spacing: 0.4375rem;
+  }
+
+  .project-list-container {
+    width: 90%;
+    margin: 84px auto 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    grid-auto-rows: auto;
+  }
+
+  .project-tile {
+    width: 100%;
+    height: 400px;
+    background-color: var(--gray-btn);
+    border-radius: 3px;
+  }
+
+  .btn-container {
+    margin: 30px auto;
+    /* padding: 20px; */
+  }
+
+  .more-projects-btn {
+    font-family: Syne, sans-serif;
+    font-size: 1.125rem;
+    background-color: var(--gray-btn);
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 8px 10px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 3px 30px 5px var(--gray);
+    cursor: pointer;
+    transition: 150ms;
+  }
+
+  .more-projects-btn:hover {
+    background-color: #6b6767;
+  }
+}
+
+.more-projects-btn img {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+}
+
+/* HIRE ME SECTION */
+
+#hire-me-section {
+  position: relative;
+  padding: 7%;
+
+  .dot-square {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+
+  .squigly-2 {
+    width: 74px;
+    height: 40px;
+    position: absolute;
+    top: 103px;
+    left: -19px;
+    transform: rotate(27.3deg);
+  }
+
+  #portrait-3 {
+    position: absolute;
+    top: 170px;
+    right: -80px;
+    width: 238px;
+    height: 359px;
+  }
+
+  .hire-me-text-container {
+    width: 230px;
+    margin: 145px 0;
+  }
+
+  .resume-btn {
+    font-family: Syne, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--main-black);
+    padding: 5px 12px;
+    margin: 25px 0;
+  }
+}
+
+.hire-me-text-container {
+  .heading {
+    font-size: 1.875rem;
+  }
+
+  .sub-heading {
+    font-size: 1.5625rem;
+    color: rgba(250, 252, 255, 0.8);
+  }
+}
+
+/* CONTACT */
+
+#contact {
+  .container {
+    padding: 0px 7%;
+    margin: 0 auto 100px;
+  }
+
+  .heading {
+    font-size: 1.875rem;
+  }
+
+  .container form input,
+  .container form textarea {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    background: #404040;
+    padding: 0.75rem 1.25rem;
+    font-size: 1.125rem;
+    font-family: Inter, sans-serif;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25) inset;
+    color: var(--white);
+    outline: none;
+    border: none;
+  }
+
+  .container form .form-heading {
+    margin: 30px 0 15px;
+    font-size: 1.125rem;
+  }
+
+  .container form textarea {
+    margin-bottom: 20px;
+  }
+
+  .container form #contact-form-submit {
+    width: max-content;
+    margin-top: 20px auto 0 unset;
+    padding: 5px 20px;
+    background-color: var(--white);
+    color: var(--main-black);
+    box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 0.25);
+  }
+}
+
+/* SOCIALS LINKS */
+
+#social-links {
+  margin-bottom: 100px;
+  .link {
+    width: 60%;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .link img {
+    width: 40px;
+    height: 40px;
+    margin-right: 25px;
+  }
+}
+
+footer {
+  display: none;
+  width: 100%;
+  padding: 20%;
+  text-align: center;
+
+  &p {
+    margin: 50px auto;
+  }
+}
+
+footer p .visible-link {
+  text-decoration: underline;
+  color: #1f47fa;
+}
+/* 
+
+    RESPONSIVE CODE
+
+*/
+
+/* DESKTOP - width = 1280px */
+
+@media only screen and (min-width: 1280px) {
+  #navbar {
+    .mobile__nav,
+    #menu-mobile {
+      display: none;
+    }
+    & ul li:not(.logo-li) {
+      display: block;
+      padding: 3px 7px;
+      transition: 200ms;
+      border-bottom: 1px solid var(--main-black);
+      text-transform: uppercase;
+    }
+    & ul li:nth-of-type(2),
+    ul li:nth-of-type(5) {
+      margin-left: 40px;
+    }
+
+    &ul li a:hover {
+      border-bottom: 1px solid var(--white);
+    }
+  }
+
+  /* hero */
+  .hero-section {
+    #portrait-1 {
+      width: 472px;
+      height: 521px;
+    }
+
+    .hero-ace {
+      font-size: 12.5rem;
+      position: absolute;
+      letter-spacing: 3.75rem;
+      margin-right: -3.75rem;
+    }
+
+    .hero-ace.top {
+      top: 15.37rem;
+    }
+
+    .hero-ace.bottom {
+      bottom: 15.3rem;
+    }
+  }
+
+  /* about */
+  .about-section {
+    width: 1200px;
+    grid-template-columns: 1.5fr min-content;
+    column-gap: 102px;
+    margin-bottom: 130px;
+
+    .squigly-1 {
+      position: absolute;
+      top: 12.1rem;
+      left: -60px;
+    }
+
+    .hello,
+    .im-ace {
+      font-size: 3.125rem;
+    }
+
+    .about-me-text {
+      font-size: 1.125rem;
+    }
+
+    .right {
+      display: block;
+      width: unset;
+      margin: unset;
+    }
+
+    .portrait-2 {
+      width: 340px;
+    }
+  }
+
+  /* projects */
+  #projects {
+    .project-header {
+      font-size: 2.1875rem;
+    }
+
+    .project-list-container {
+      width: 1200px;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      grid-auto-rows: auto auto;
+    }
+
+    .project-tile {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 0;
+    }
+
+    .btn-container {
+      width: 1200px;
+    }
+
+    .more-projects-btn {
+      margin-left: auto;
+      margin-right: unset;
+    }
+  }
 }

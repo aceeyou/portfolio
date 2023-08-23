@@ -11,8 +11,31 @@
     <title>Ace Logronio</title>
   </head>
   <body>
+    <div class="overlay__mobile_nav_open"></div>
     <header>
       <nav role="navbar" id="navbar">
+        <img
+          width="30"
+          height="30"
+          src="https://img.icons8.com/material-sharp/24/FFFFFF/menu--v1.png"
+          alt="menu--v1"
+          id="menu-mobile"
+        />
+        <div class="mobile__nav">
+          <ul>
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/material-outlined/48/FFFFFF/delete-sign.png"
+              alt="delete-sign"
+              id="menu-mobile-close"
+            />
+            <li><a class="text-semibold" href="#about">About</a></li>
+            <li><a class="text-semibold" href="#projects">Projects</a></li>
+            <li><a class="text-semibold" href="#">Contact</a></li>
+            <li><a class="text-semibold" href="#">Hire Me</a></li>
+          </ul>
+        </div>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -48,6 +71,7 @@
             src="./images/graphics/squigly1.png"
             alt="squigly line graphic"
             class="squigly-1"
+            lazyloading="yes"
           />
           <p class="hello">Hello! 👋</p>
           <p class="im-ace">
@@ -57,8 +81,8 @@
             I’m an avid fan of tech since grade school. My love for coding
             started in high school when I searched for a career that will suit
             my skills. I discovered Web development and was in love with it
-            since then. In 2023, I finished college with the degree in Bachelor
-            of Science in Information Technology at Bicol University
+            since then. In 2023, I finished college with a degree of Bachelor of
+            Science in Information Technology at Bicol University
           </p>
           <div class="tech-used">
             <div class="tech-heading-container">
@@ -88,11 +112,129 @@
         </div>
       </section>
       <section id="projects">
-        <p class="text-bold">PROJECTS</p>
+        <p class="text-bold project-header">PROJECTS</p>
+        <div class="project-list-container">
+          <div class="project-tile"></div>
+          <div class="project-tile"></div>
+          <div class="project-tile"></div>
+          <div class="project-tile"></div>
+        </div>
+        <div class="btn-container">
+          <button class="more-projects-btn">
+            more
+            <img
+              width="90"
+              height="90"
+              src="https://img.icons8.com/ios-glyphs/90/FFFFFF/circled-right.png"
+              alt="circled-right"
+            />
+          </button>
+        </div>
       </section>
-    </main>
-    <footer></footer>
+      <section id="hire-me-section">
+        <img
+          src="./images/ace/ace-photo-4.png"
+          alt="ace logronio portrait in the hire me section"
+          id="portrait-3"
+        />
+        <img src="./images/graphics/squigly2.png" alt="" class="squigly-2" />
+        <img
+          src="./images/graphics/dot-circle.png"
+          alt="square made of dots - graphic image only"
+          class="dot-square"
+        />
+        <div class="hire-me-text-container">
+          <p class="text-bold heading">Hire me! 🤝</p>
+          <p class="text-bold sub-heading">Ace Logronio</p>
+          <p class="text-bold sub-heading">Front-end Developer</p>
+          <button class="resume-btn">Résumé</button>
+          <p class="hire-me-because">
+            Why hire me? Because I’m the best of the best. I was hailed champion
+            of the web development competition of my college.
+          </p>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="container">
+          <p class="text-bold heading">Contact Me 📫</p>
 
-    <!-- <script src="./scripts/app.js"></script> -->
+          <form action="#">
+            <p class="form-heading">Send me a message here</p>
+
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" />
+            <label for="subject" class="sr-only"></label>
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Subject"
+            />
+            <label for="message" class="sr-only"></label>
+            <textarea
+              name="messge"
+              id="message"
+              cols="46"
+              rows="8"
+              placeholder="Write your message here..."
+            ></textarea>
+            <input
+              type="submit"
+              value="Send mail"
+              class="text-bold"
+              id="contact-form-submit"
+            />
+          </form>
+        </div>
+      </section>
+      <div id="social-links">
+        <div class="link linked-in">
+          <img
+            width="50"
+            height="50"
+            src="https://img.icons8.com/ios-filled/50/FFFFFF/linkedin.png"
+            alt="linkedin"
+          />
+          <a href="https://www.linkedin.com/in/ace-arwin-logronio/"
+            >Ace Arwin Logronio</a
+          >
+        </div>
+        <div class="link github">
+          <img
+            width="90"
+            height="90"
+            src="https://img.icons8.com/ios-glyphs/90/FFFFFF/github.png"
+            alt="github"
+          />
+          <a href="https://github.com/aceeyou">github.com/aceeyou</a>
+        </div>
+        <div class="link email-address">
+          <img
+            width="90"
+            height="90"
+            src="https://img.icons8.com/ios-glyphs/90/FFFFFF/email.png"
+            alt="email"
+          />
+          <p>acearwingl@gmail.com</p>
+        </div>
+        <div class="link phone-number">
+          <img
+            width="90"
+            height="90"
+            src="https://img.icons8.com/ios-glyphs/90/FFFFFF/iphone.png"
+            alt="iphone"
+          />
+          <p>(+63) 920 280 5154</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        All icons used in this site are from
+        <a class="visible-link" href="https://icons8.com">Icons8.com</a>
+      </p>
+    </footer>
+
+    <script src="./scripts/app.js"></script>
   </body>
 </html>
