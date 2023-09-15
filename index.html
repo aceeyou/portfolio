@@ -6,9 +6,24 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
     />
+    <meta http-equiv="”Permissions-Policy”" content="”interest-cohort" ="()”" />
+    <meta
+      name="description"
+      content="This is a portfolio webpage of Ace Arwin Logronio. Check it out!"
+    />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="icon" href="./images/logo/logo-black-circle.png" />
     <title>Ace Logronio</title>
+    <script src="/scripts/app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("fOBHHnT2Td22pkp1F");
+      })();
+    </script>
   </head>
   <body>
     <div class="overlay__mobile_nav_open"></div>
@@ -39,18 +54,18 @@
           </ul>
         </div>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about" class="mobile_a">About</a></li>
+          <li><a href="#projects" class="mobile_a">Projects</a></li>
           <li class="logo-li">
-            <a href="#hero"
+            <a href="#hero" class="mobile_a"
               ><img
                 src="./images/logo/logo-white.png"
                 alt="ace logronio logo"
                 id="logo-img"
             /></a>
           </li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#hire-me-section">Hire Me</a></li>
+          <li><a href="#contact" class="mobile_a">Contact</a></li>
+          <li><a href="#hire-me-section" class="mobile_a">Hire Me</a></li>
         </ul>
       </nav>
     </header>
@@ -62,9 +77,11 @@
             alt="ace logronio portrait number 1"
             id="portrait-1"
           />
-          <p class="hero-ace top">ACE</p>
-          <p class="hero-ace main-ace">ACE</p>
-          <p class="hero-ace bottom">ACE</p>
+          <div class="container-ace">
+            <p class="hero-ace top">ACE</p>
+            <p class="hero-ace main-ace">ACE</p>
+            <p class="hero-ace bottom">ACE</p>
+          </div>
         </div>
       </section>
       <section class="about-section" id="about">
@@ -213,7 +230,12 @@
           <p class="text-bold heading">Hire me! 🤝</p>
           <p class="text-bold sub-heading">Ace Logronio</p>
           <p class="text-bold sub-heading">Front-end Developer</p>
-          <button class="resume-btn">Résumé</button>
+          <button
+            class="resume-btn"
+            onclick="window.open('./images/files/CVResume-Ace_Logronio.pdf', '_blank')"
+          >
+            Résumé
+          </button>
           <p class="hire-me-because">
             Why hire me? Because I’m the best of the best. I was hailed champion
             of the web development competition of my college.
@@ -224,31 +246,65 @@
         <div class="container">
           <p class="text-bold heading">Contact Me 📫</p>
 
-          <form action="#">
+          <form
+            id="formContact"
+            action="https://formsubmit.co/2c541fc9d188a09448710946f1d4c034"
+            method="POST"
+          >
             <p class="form-heading">Send me a message here</p>
 
             <label for="email" class="sr-only">Email</label>
-            <input type="email" name="email" id="email" placeholder="Email" />
+            <input
+              type="text"
+              name="name"
+              required
+              id="name"
+              placeholder="Name"
+            />
+            <input
+              type="email"
+              name="email"
+              required
+              id="email"
+              placeholder="Email"
+            />
             <label for="subject" class="sr-only"></label>
             <input
               type="text"
               name="subject"
               id="subject"
+              required
               placeholder="Subject"
             />
             <label for="message" class="sr-only"></label>
             <textarea
-              name="messge"
+              name="message"
               id="message"
+              required
               cols="46"
               rows="8"
               placeholder="Write your message here..."
             ></textarea>
+
+            <!-- submit -->
             <input
               type="submit"
               value="Send mail"
               class="text-bold"
               id="contact-form-submit"
+            />
+
+            <!-- hidden -->
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Hi! I received your email. Thank You"
+            />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://aceeyou.github.io/portfolio/thankyou.html"
             />
           </form>
         </div>
@@ -301,6 +357,6 @@
       </p>
     </footer>
 
-    <script src="./scripts/app.js"></script>
+    <!-- <script src="./scripts/app.js"></script> -->
   </body>
 </html>
