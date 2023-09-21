@@ -10,6 +10,7 @@
   --css: #254bdd;
   --javascript: #e9aa08;
   --react-blue: #127ee2;
+  --nodejs: #80bd00;
 }
 
 *,
@@ -308,22 +309,25 @@ header {
     font-size: 1rem;
     margin-right: 10px;
   }
+}
+.html-tech {
+  background-color: var(--html);
+}
 
-  .html-tech {
-    background-color: var(--html);
-  }
+.css-tech {
+  background-color: var(--css);
+}
 
-  .css-tech {
-    background-color: var(--css);
-  }
+.js-tech {
+  background-color: var(--javascript);
+}
 
-  .js-tech {
-    background-color: var(--javascript);
-  }
+.react-tech {
+  background-color: var(--react-blue);
+}
 
-  .react-tech {
-    background-color: var(--react-blue);
-  }
+.nodejs-tech {
+  background-color: var(--nodejs);
 }
 
 /* PROJECTS */
@@ -400,6 +404,20 @@ header {
 
   .more-projects-btn:hover {
     background-color: #6b6767;
+  }
+
+  .tech-used {
+    display: flex;
+    padding: 15px 0 0px;
+  }
+
+  .tech-used .tech {
+    width: 18px;
+    height: 18px;
+    /* padding: 3px 8px; */
+    margin-right: 6px;
+    border-radius: 10px;
+    font-weight: 500;
   }
 }
 
