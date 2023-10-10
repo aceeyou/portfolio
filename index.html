@@ -97,11 +97,11 @@
             <span class="text-semibold">I'm </span>Ace Logronio
           </p>
           <p class="about-me-text">
-            I’m an avid fan of tech since grade school. My love for coding
-            started in high school when I searched for a career that will suit
-            my skills. I discovered Web development and was in love with it
-            since then. In 2023, I finished college with a degree of Bachelor of
-            Science in Information Technology at Bicol University
+            My love for coding started in high school when I searched for a
+            career that suited my skills. I discovered web development and have
+            fallen in love with it since then. I just got my degree in
+            Information Technology from Bicol University, and I'm ready to take
+            on the world as a front-end developer.
           </p>
           <div class="tech-used">
             <div class="tech-heading-container">
@@ -143,14 +143,10 @@
               src="./images/project-snapshots/countries.jpg"
               alt="countries snapshot"
             />
-            <h2 class="project-title">
-              Countries - A Frontend Mentor Challenge
-            </h2>
-            <div class="tech-used"></div>
+            <h2 class="project-title">Countries</h2>
             <p class="project-description">
               I got this project/challenge from Frontend Mentor. Basically, it
-              is a practice for using an API but without fetching the data from
-              a server somewhere on the internet.
+              is a practice for using an API. - A Frontend Mentor Challenge
             </p>
             <div class="tech-used">
               <div class="tech js-tech"></div>
@@ -166,14 +162,14 @@
               src="./images/project-snapshots/interactive-comments.jpg"
               alt="interactive comments section snapshot"
             />
-            <h2 class="project-title">
-              Interactive Comments Section - A Frontend Mentor Challenge
-            </h2>
+            <h2 class="project-title">Interactive Comments Section</h2>
 
             <p class="project-description">
-              I really like this project because I used grid and also basic CRUD
-              from a local API. The project allows you to write new comments and
-              reply to an existing comment made by others.
+              I like this project because I used the grid layout of CSS, created
+              a dark and light theme switcher, and handled some basic CRUD
+              functionality. This project allows the users to write new comments
+              and reply to existing comments made by other users. - A Frontend
+              Mentor Challenge
             </p>
             <div class="tech-used">
               <div class="tech js-tech"></div>
@@ -189,14 +185,13 @@
               src="./images/project-snapshots/ecommerce-project-page.jpg"
               alt="e-commerce product page snapshot"
             />
-            <h2 class="project-title">
-              E-commerce Product Page - A Frontend Mentor Challenge
-            </h2>
+            <h2 class="project-title">E-commerce Product Page</h2>
             <p class="project-description">
-              This project is an example page for a shoe product. It allows you
-              to browser through the pictures of the product. You can add the
-              product to your cart and also view them by clicking the cart
-              button on the nav bar.
+              This project is an example product page for a pair of shoes. It
+              allows you to browse through the pictures of the product. You can
+              also add the product to your cart with the desired quantity and
+              view it by clicking the cart button on the navigation bar. - A
+              Frontend Mentor Challenge
             </p>
             <div class="tech-used">
               <div class="tech js-tech"></div>
@@ -209,13 +204,10 @@
             onclick="window.open('https://aceeyou.github.io/cosmos-odyssey/')"
           >
             <img src="./images/project-snapshots/cosmos-odyssey-2.jpg" alt="" />
-            <h2 class="project-title">
-              Cosmos Odyssey Landing Page - A Free Figma Design Published by
-              Giorgi Matsukatovi
-            </h2>
+            <h2 class="project-title">Cosmos Odyssey Landing Page</h2>
             <p class="project-description">
-              I got the design on dribbble. It is made by Giorgi Matsukatovi. I
-              made this landing page with ReactJS, styling it with CSS.
+              This design was made by Giorgi Matsukatovi and posted on Dribbble.
+              I made this landing page with ReactJS, styling it with CSS.
             </p>
             <div class="tech-used">
               <div class="tech js-tech"></div>
@@ -254,20 +246,15 @@
           <p class="text-bold sub-heading">Front-end Developer</p>
           <button
             class="resume-btn"
-            onclick="window.open('./files/LogronioAceArwin-Resume.pdf', '_blank')"
+            onclick="window.open('./resume/LogronioAceArwin-Resume.pdf', '_blank')"
           >
             Résumé
           </button>
-          <p class="hire-me-because">
-            When I work, I really work. I always do my 💯 effort on all of my
-            tasks. I make sure that the design and the code is synonymous.
-          </p>
         </div>
       </section>
       <section id="contact">
+        <p class="text-bold heading">Contact Me 📫</p>
         <div class="container">
-          <p class="text-bold heading">Contact Me 📫</p>
-
           <form
             id="formContact"
             action="https://formsubmit.co/2c541fc9d188a09448710946f1d4c034"
@@ -275,30 +262,34 @@
           >
             <p class="form-heading">Send me a message here</p>
 
-            <label for="email" class="sr-only">Email</label>
+            <label for="email" class="sr-only">Name</label>
             <input
               type="text"
               name="name"
               required
               id="name"
               placeholder="Name"
+              autocomplete="off"
             />
+            <label for="email" class="sr-only">Email</label>
             <input
               type="email"
               name="email"
               required
               id="email"
               placeholder="Email"
+              autocomplete="off"
             />
-            <label for="subject" class="sr-only"></label>
+            <label for="subject" class="sr-only">Subject</label>
             <input
               type="text"
               name="subject"
               id="subject"
               required
               placeholder="Subject"
+              autocomplete="off"
             />
-            <label for="message" class="sr-only"></label>
+            <label for="message" class="sr-only">Message</label>
             <textarea
               name="message"
               id="message"
@@ -306,6 +297,7 @@
               cols="46"
               rows="8"
               placeholder="Write your message here..."
+              autocomplete="off"
             ></textarea>
 
             <!-- submit -->
@@ -329,48 +321,49 @@
               value="https://aceeyou.github.io/portfolio/thankyou.html"
             />
           </form>
+
+          <div id="social-links">
+            <div class="link linked-in">
+              <img
+                width="50"
+                height="50"
+                src="https://img.icons8.com/ios-filled/50/FFFFFF/linkedin.png"
+                alt="linkedin"
+              />
+              <a href="https://www.linkedin.com/in/ace-arwin-logronio/"
+                >Ace Arwin Logronio</a
+              >
+            </div>
+            <div class="link github">
+              <img
+                width="90"
+                height="90"
+                src="https://img.icons8.com/ios-glyphs/90/FFFFFF/github.png"
+                alt="github"
+              />
+              <a href="https://github.com/aceeyou">github.com/aceeyou</a>
+            </div>
+            <div class="link email-address">
+              <img
+                width="90"
+                height="90"
+                src="https://img.icons8.com/ios-glyphs/90/FFFFFF/email.png"
+                alt="email"
+              />
+              <p>acearwingl@gmail.com</p>
+            </div>
+            <div class="link phone-number">
+              <img
+                width="90"
+                height="90"
+                src="https://img.icons8.com/ios-glyphs/90/FFFFFF/iphone.png"
+                alt="iphone"
+              />
+              <p>(+63) 920 280 5154</p>
+            </div>
+          </div>
         </div>
       </section>
-      <div id="social-links">
-        <div class="link linked-in">
-          <img
-            width="50"
-            height="50"
-            src="https://img.icons8.com/ios-filled/50/FFFFFF/linkedin.png"
-            alt="linkedin"
-          />
-          <a href="https://www.linkedin.com/in/ace-arwin-logronio/"
-            >Ace Arwin Logronio</a
-          >
-        </div>
-        <div class="link github">
-          <img
-            width="90"
-            height="90"
-            src="https://img.icons8.com/ios-glyphs/90/FFFFFF/github.png"
-            alt="github"
-          />
-          <a href="https://github.com/aceeyou">github.com/aceeyou</a>
-        </div>
-        <div class="link email-address">
-          <img
-            width="90"
-            height="90"
-            src="https://img.icons8.com/ios-glyphs/90/FFFFFF/email.png"
-            alt="email"
-          />
-          <p>acearwingl@gmail.com</p>
-        </div>
-        <div class="link phone-number">
-          <img
-            width="90"
-            height="90"
-            src="https://img.icons8.com/ios-glyphs/90/FFFFFF/iphone.png"
-            alt="iphone"
-          />
-          <p>(+63) 920 280 5154</p>
-        </div>
-      </div>
     </main>
     <footer>
       <p>
