@@ -1,0 +1,50 @@
+.tech {
+  padding: 0.5rem 1rem;
+  border-radius: var(--s-radius);
+  font-weight: 600;
+}
+
+.projectCard {
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.projectCard p {
+  font-size: 0rem;
+}
+
+.tech[data-value="html"] {
+  background-color: var(--html-color);
+}
+
+.tech[data-value="css"] {
+  background-color: var(--css-blue);
+}
+
+.tech[data-value="js"] {
+  background-color: var(--js-mustard);
+}
+
+.tech[data-value="react"] {
+  background-color: var(--react-blue);
+}
+
+.tech[data-value="mysql"] {
+  background-color: var(--mysql);
+}
+
+.tech[data-value="vscode"] {
+  background-color: var(--vscode);
+}
+
+.tech[data-value="figma"] {
+  background-color: var(--figma);
+}
+
+.tech[data-value="git"] {
+  background-color: var(--html-color);
+}
+
+.tech[data-value="github"] {
+  background-color: var(--github);
+}

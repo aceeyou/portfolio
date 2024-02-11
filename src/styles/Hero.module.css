@@ -1,0 +1,150 @@
+.avatar {
+  position: relative;
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  /* background: url("../images/ace/ace-photo-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; */
+  width: 300px;
+  height: 40rem;
+  margin: 4rem auto 0;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  animation: fadein 2s forwards;
+}
+
+.avatar img {
+  width: min(95%, 320px);
+}
+
+.group {
+  position: absolute;
+}
+
+.ace {
+  font-family: "Syne", sans-serif;
+  font-size: 5.5rem;
+  font-weight: 800;
+  letter-spacing: 0.5rem;
+  line-height: 3.1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.ace {
+  opacity: 1;
+  z-index: 99999;
+  transition: 100ms;
+  animation: pulse 5s ease-in-out infinite;
+  animation-delay: 3.5s;
+}
+.ace::before,
+.ace::after {
+  content: "ACE";
+  opacity: 0.4;
+}
+
+.frontend_developer {
+  overflow: hidden;
+  border-right: 0.15rem solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  position: absolute;
+  width: fit-content;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: translateY(-5px);
+  letter-spacing: 0.45rem;
+  font-family: "Syne", sans-serif;
+
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@media (prefers-color-scheme: light) {
+  .ace {
+    color: #314cb6;
+    color: #5b5750;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .avatar {
+    width: 340px;
+  }
+
+  .ace {
+    font-size: 6.5rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .avatar {
+    width: 25rem;
+    height: 40rem;
+    margin: unset;
+    margin-top: -50px;
+  }
+
+  .avatar img {
+    width: 400px;
+  }
+
+  .ace {
+    font-size: 9rem;
+    line-height: 4.8rem;
+  }
+
+  .frontend_developer {
+    font-size: 1.6rem;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.015);
+  }
+  25% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}

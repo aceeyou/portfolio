@@ -1,0 +1,211 @@
+.container {
+  position: relative;
+  padding-top: 150px;
+  width: minmax(100%, var(--max-width));
+  width: 100%;
+}
+
+.graphic1,
+.graphic2,
+.graphic3 {
+  position: absolute;
+}
+
+.graphic1 {
+  transform: rotate(28deg) translateY(50px);
+  width: 150px;
+  top: 20px;
+  left: 50px;
+}
+
+.graphic2 {
+  top: 0;
+  right: 50px;
+}
+
+.graphic3 {
+  bottom: 10px;
+  right: 100px;
+  transform: scale(2) rotate(150deg);
+  z-index: 2;
+}
+
+.contactme_section {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.contact_information {
+  position: absolute;
+  left: 30px;
+}
+
+.image_container {
+  transform: translateX(110px);
+}
+
+.image_container img {
+  width: 280px;
+}
+
+.hire_me {
+  font-size: 2rem;
+}
+
+.job_position {
+  opacity: 0.7;
+  font-family: "Syne", sans-serif;
+}
+
+.resume_btn_container {
+  padding-block: 1.5rem;
+}
+
+.resume_btn {
+  padding: 8px 15px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  box-sizing: border-box;
+  border: none;
+  transition: ease-in-out 200ms;
+
+  /* animation: pulse 5s infinite; */
+}
+
+.resume_btn:hover,
+.resume_btn:focus {
+  background-color: white;
+  color: black;
+}
+
+.social_links_title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+.socila_link svg path {
+  fill: white;
+}
+
+.social_link:nth-of-type(2) {
+  margin-inline: 0.5rem;
+}
+
+@media only screen and (min-width: 470px) {
+  .graphic1 {
+    left: 0px;
+  }
+
+  .graphic3 {
+    right: 150px;
+  }
+
+  .contact_information {
+    left: 40px;
+  }
+
+  .image_container {
+    transform: translateX(100px);
+  }
+
+  .image_container img {
+    width: 320px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .graphic1 {
+    left: 40px;
+  }
+
+  .graphic3 {
+    right: 150px;
+  }
+
+  .contact_information {
+    left: 15%;
+  }
+
+  .image_container {
+    transform: translateX(-70px);
+  }
+
+  .image_container img {
+    width: 320px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .graphic1 {
+    display: none;
+  }
+
+  .graphic3 {
+    right: unset;
+    left: 70px;
+    bottom: -100px;
+    display: none;
+  }
+
+  .container {
+    padding-bottom: 10px;
+  }
+
+  .contactme_section {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 30px;
+  }
+
+  .contact_information {
+    position: unset;
+  }
+
+  .image_container {
+    position: unset;
+    transform: unset;
+  }
+
+  .image_container img {
+    width: 320px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .resume_btn {
+    background-color: var(--white);
+    border: 1px solid rgb(207, 206, 206);
+    border: 1px solid var(--black);
+  }
+
+  .resume_btn:hover,
+  .resume_btn:focus {
+    background-color: var(--black);
+    color: white;
+  }
+
+  .social_link svg path {
+    fill: var(--black);
+  }
+}
+
+@keyframes pulse {
+  70% {
+    background-color: white;
+    color: var(--black);
+  }
+  0%,
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  100% {
+    background-color: initial;
+    color: white;
+  }
+}
