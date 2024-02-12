@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.61cea1f9.css",
+    "main.js": "/portfolio/static/js/main.63e5da42.js",
+    "static/js/787.7da95b79.chunk.js": "/portfolio/static/js/787.7da95b79.chunk.js",
+    "static/media/ace-photo-1.png": "/portfolio/static/media/ace-photo-1.d348d1a908b8be47c70c.png",
+    "static/media/ace-photo-3.png": "/portfolio/static/media/ace-photo-3.3380ab1fb1da04d37ff2.png",
+    "static/media/ace-photo-2.png": "/portfolio/static/media/ace-photo-2.aeab20390faa8d85508f.png",
+    "static/media/interactive-comments.jpg": "/portfolio/static/media/interactive-comments.fc7f0975766c0b72927a.jpg",
+    "static/media/ecommerce-project-page.jpg": "/portfolio/static/media/ecommerce-project-page.c4e7b08187048383e390.jpg",
+    "static/media/countries.jpg": "/portfolio/static/media/countries.9f826449e1fd25ff19fb.jpg",
+    "static/media/cosmos-odyssey-2.jpg": "/portfolio/static/media/cosmos-odyssey-2.9af3ad5e193276fb2a44.jpg",
+    "static/media/logo-black.png": "/portfolio/static/media/logo-black.c63e2a836e3c3dd89dd9.png",
+    "index.html": "/portfolio/index.html",
+    "main.61cea1f9.css.map": "/portfolio/static/css/main.61cea1f9.css.map",
+    "main.63e5da42.js.map": "/portfolio/static/js/main.63e5da42.js.map",
+    "787.7da95b79.chunk.js.map": "/portfolio/static/js/787.7da95b79.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.61cea1f9.css",
+    "static/js/main.63e5da42.js"
+  ]
+}
