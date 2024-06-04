@@ -65,9 +65,7 @@ function ContactForm() {
     <IntersectionOberserver>
       <article className={style.form__container}>
         <form ref={form} className={style.form} onSubmit={sendEmail}>
-          <h1 className={style.form__heading}>
-            You can also send me a message 📫
-          </h1>
+          <h1 className={style.form__heading}>Send me a message! 📫</h1>
           <InputItem
             label={"Name"}
             name="user_name"

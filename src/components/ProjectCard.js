@@ -44,13 +44,7 @@ function ProjectCard({
               />
             </div>
             <h1 className={style.project_title}>{project_title}</h1>
-            {!!designOrigin && (
-              <div className={style.frontendmentor}>
-                <a href={designOrigin} className={style.fm_link}>
-                  Project Inspiration
-                </a>
-              </div>
-            )}
+
             <p className={style.description}>{description}</p>
             <div>
               <ul className={style.tech_used__list}>
@@ -62,6 +56,18 @@ function ProjectCard({
           </div>
         </div>
       </article>
+      {!!designOrigin && (
+        <div className={style.frontendmentor}>
+          <a
+            href={designOrigin}
+            rel="noreferrer"
+            target="_blank"
+            className={style.fm_link}
+          >
+            Project Inspiration
+          </a>
+        </div>
+      )}
     </IntersectionOberserver>
   );
 }
